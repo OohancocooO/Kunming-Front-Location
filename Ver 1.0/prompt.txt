@@ -1,0 +1,37 @@
+现在我有一个ERA5的2012年1月全月每小时数据，data2012_01_p.nc
+
+数据内容如下：
+<xarray.Dataset> Size: 170MB
+Dimensions:    (longitude: 101, latitude: 101, time: 696)
+Coordinates:
+  * longitude  (longitude) float32 404B 100.0 100.1 100.2 ... 109.8 109.9 110.0
+  * latitude   (latitude) float32 404B 30.0 29.9 29.8 29.7 ... 20.2 20.1 20.0
+  * time       (time) datetime64[ns] 6kB 2012-01-01 ... 2012-01-29T23:00:00
+Data variables:
+    u10        (time, latitude, longitude) float32 28MB ...
+    v10        (time, latitude, longitude) float32 28MB ...
+    d2m        (time, latitude, longitude) float32 28MB ...
+    t2m        (time, latitude, longitude) float32 28MB ...
+    sp         (time, latitude, longitude) float32 28MB ...
+    tp         (time, latitude, longitude) float32 28MB ...
+其中，sp代表surface presure 地表气压，t2m代表 2m temperature  2m 温度
+
+现在我需要通过这个数据来计算准静止锋的锋面位置，采用干绝热条件下温度变换的守恒量——位温θ表征不同气压(高度)的大气热力状况。用位温密集区，即地面$|\nabla\theta|$最大值的连线表示昆明准静止锋锋面。方法如下：
+(1) 计算地面站点θ
+方程：$\theta=T(\frac{1000}{p})^{\frac{R_{d}}{c_{pd}}}$
+式中，p为本站气压，$R_{d}/c_{pd}$取0.286。利用Cressman(1959)方法进行插值，站点θ插值到经纬网格点上，范围为(20°—30°N，100°—110°E)，格距取0.1°×0.1°(约10 km×10 km)。由于θ定义为空气沿干绝热过程变化到1000 hPa时的温度，因此，插值时避开了地形高度问题。
+
+(2) 计算每个格点上的$|\nabla\theta|$
+方程：$\mid\nabla\theta\mid=\sqrt{(\frac{\Delta\theta}{\Delta x})^2+(\frac{\Delta\theta}{\Delta y})^2}$
+式中，$\nabla x$和$\nabla y$取1个经纬距(约110 km)，根据南下冷气团与高原上暖气团为东、西分布的特点，差分计算时，$\Delta x_{i}=x_{i-5}-x_{i+5}$,$\Delta y_{i}=y_{i-5}-y_{i+5}$、(i, j)为格点坐标，起始点为(30°N，100°E)，格距取0.1°。当Δθ/Δx < 0或Δθ/Δy < 0，则令$\Delta\theta/\Delta x<0$或$\Delta\theta/\Delta y<0$，这样可以消除北暖南冷或西冷东暖等非昆明准静止锋系统产生的大值噪点。
+
+在天气图上分析锋面，一般用一个经纬度内多于3条等温度线(间隔4℃)的密集区作为锋区(许美玲等，2011)，因此取$|\nabla\theta|\geq8K/110km$的格点作为锋线上的初选点。
+
+(3) 计算每个$|\nabla\theta|\geq8K/110km$初选格点上的$\Delta u{=}u_{i-5}-u_{i+5}$。根据昆明准静止锋呈准南北向特征，一般情况下锋线格点上$u_{i}=0$、$u_{i-5}>0$、$u_{i+5}<0$、$\Delta $。在昆明准静止锋增强西进或减弱东退时(段旭等，2002)，动力场变化常常先于热力场，即风向改变先于温度升降，这时ui≠0。但无论是何种情形，越靠近风速0线附近风速的绝对值越小，因此有ui-5>ui+5，即Δu>0。考虑到吹向锋面的风速必须保证一定的梯度(东风梯度)，将判识临界值提高到$\Delta u\leq1m/s$，作为初选点删除的标准，保留剩余的为复选点。
+
+(4) 依据昆明准静止锋准南北向特征和单一性，如果同一纬度上有二个以上复选点，取最大的点作为锋线点。将保留下来的点相连接，构成了客观计算的锋线。
+
+(5) 云贵高原上地形和太阳辐射引起的局地动力和热力扰动较为频繁，易产生非昆明准静止锋系统的$|\nabla\theta|\leq8K/110km$或$\Delta u\geq1m/s$的噪点形成的小尺度锋线，根据昆明准静止锋为天气尺度系统这一特性，删去小于30个格点(尺度约300 km)构成的锋线。
+
+输出结果：以沿26°N纬度所计算出来的锋线位置来输出ASCII文件，文件内容为：
+TIME	LONGTITUDE
