@@ -19,3 +19,7 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 - [ ] 考察静止锋出现前后气象要素的变化
 - [ ] 做 Powerpoint
 - [ ] 汇报 [2024/05/08]
+
+## 中国地图矢量图来源
+* [中国行政区划矢量图](https://github.com/GaryBikini/ChinaAdminDivisonSHP)
+* GaryBikini/ChinaAdminDivisonSHP: v24.02.06, 2024, DOI: [10.5281/zenodo.10624971](https://zenodo.org/badge/latestdoi/269489269)
