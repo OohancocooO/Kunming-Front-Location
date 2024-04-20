@@ -1,5 +1,6 @@
 # Kunming-Front-Location
-For the teamwork of Atmosphereic Physical
+The teamwork of Atmospheric Physical Lesson
+大气物理学的小组作业
 
 ## 作业内容
 利用位温和假相当位温识别一次昆明准静止锋的演变过程，考察静止锋出现前后气象要素的变化
