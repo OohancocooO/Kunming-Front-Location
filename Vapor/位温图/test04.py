@@ -8,7 +8,7 @@ from datetime import datetime
 era5_data = xr.open_dataset("Dataset\\data2008_1.nc")
 
 # 选择时间点
-time_to_plot = "2008-01-12T14:00:00"
+time_to_plot = "2008-01-12T08:00:00"
 data_at_time = era5_data.sel(time=time_to_plot)
 
 # 定义相关常数
