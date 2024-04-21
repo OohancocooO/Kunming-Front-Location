@@ -26,7 +26,7 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 ![850hPa的位温分层设色图](Vapor/img/Figure_2.png)
 >2. 850hPa的等值线图
 ![850hPa的等值线图](Vapor/img/Figure_1.png)
->3. 850hPa的等值线图-(`#FFFFCC`是西南风，`#FFCCCC`是东北风)
+>3. 850hPa的等值线图-(![#FFFFCC](https://placehold.co/15x15/FFFFCC/FFFFCC.png) `#FFFFCC`是西南风，![#FFCCCC](https://placehold.co/15x15/FFCCCC/FFCCCC.png) `#FFCCCC`是东北风)
 ![850hPa的等值线图-(#FFFFCC是西南风，#FFCCCC是东北风)](Vapor/img/Figure_3.png)
 
 ## 数据来源 | Data sources
