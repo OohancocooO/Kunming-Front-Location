@@ -14,7 +14,7 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 ## 任务清单 | Lists
 - [x] ERA5数据的下载
 - [x] 对位温进行计算以及绘图
-- [ ] 利用UV风场看其风向的变化
+- [x] 利用UV风场看其风向的变化
 - [ ] 计算出锋线的位置
 - [ ] 考察静止锋出现前后气象要素的变化
 - [ ] 做 Powerpoint
@@ -23,9 +23,11 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 ## 目前成果 | Current results
 ### *Vapor*
 >1. 850hPa的位温分层设色图
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](Vapor/img/Figure_2.png)
+![850hPa的位温分层设色图](Vapor/img/Figure_2.png)
 >2. 850hPa的等值线图
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](Vapor/img/Figure_1.png)
+![850hPa的等值线图](Vapor/img/Figure_1.png)
+>3. 850hPa的等值线图-( '#FFFFCC' 是西南风， '#FFCCCC' 是东北风)
+![850hPa的等值线图-(#FFFFCC是西南风，#FFCCCC是东北风)](Vapor/img/Figure_3.png)
 
 ## 数据来源 | Data sources
 > 1.  [中国行政区划矢量图](https://github.com/GaryBikini/ChinaAdminDivisonSHP) 

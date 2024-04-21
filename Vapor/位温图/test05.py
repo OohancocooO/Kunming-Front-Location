@@ -12,9 +12,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 # 读取ERA5文件数据
-era5_data = xr.open_dataset(
-    r"D:\Study\Yunnan Uni\Atmos Physical\data\Ver 1.0\data2008_1.nc"
-)
+era5_data = xr.open_dataset("Dataset\\data2008_1.nc")
 
 # 定义相关常数
 P0 = 85000  # 参考压强（Pa）
