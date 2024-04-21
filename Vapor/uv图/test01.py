@@ -4,8 +4,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 from datetime import datetime
 
-# 读取ERA5文件数据
-era5_data = xr.open_dataset("Dataset\\data2008_1.nc")
+era5_data = xr.open_dataset(r"../../Dataset/data2008_1.nc")
 
 # 选择时间点
 time_to_plot = "2008-01-12T08:00:00"
@@ -24,7 +23,7 @@ v10_data = era5_data["v10"]
 lons = u10_data.longitude.values
 lats = u10_data.latitude.values
 
-# 定义区域范围
+# 定义区域范围,云南的经纬度大致范围
 lon_range = [100, 110]
 lat_range = [22, 30]
 
@@ -49,7 +48,7 @@ sp = regional_data["sp"]
 theta = T_kelvin * (P0 / sp) ** (Rd / Cp)
 
 # 读取中国各省边界数据
-china_provinces = gpd.read_file("Province_SHP\\province.shp")
+china_provinces = gpd.read_file("../../Province_SHP/province.shp")
 
 # 绘图
 fig, ax = plt.subplots(figsize=(10, 10))
@@ -74,7 +73,7 @@ ax.contourf(
     colors="#FFFFCC",
 )
 
-# 使用contourf填充u10和v10同时小于0的部分
+# 使用contourf填充u10和v10同时小于0的部分,正值表示风向朝向东方（东风），负值表示风向朝向西方（西风）
 u10_less_than_0 = regional_data["u10"].where(
     (regional_data["u10"] < 0) & (regional_data["v10"] < 0)
 )

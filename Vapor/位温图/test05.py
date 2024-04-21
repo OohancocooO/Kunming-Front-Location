@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 # 读取ERA5文件数据
-era5_data = xr.open_dataset("Dataset\\data2008_1.nc")
+era5_data = xr.open_dataset("../../Dataset/data2008_1.nc")
 
 # 定义相关常数
 P0 = 85000  # 参考压强（Pa）
@@ -24,7 +24,7 @@ lon_range = [100, 110]
 lat_range = [22, 30]
 
 # 读取中国各省边界数据
-china_provinces = gpd.read_file("Province_SHP\\province.shp")
+china_provinces = gpd.read_file("../../Province_SHP/province.shp")
 
 
 # 创建文件夹保存图片
