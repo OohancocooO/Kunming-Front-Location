@@ -45,7 +45,7 @@ RH = np.exp((17.27 * Td) / (243.04 + Td)) / np.exp((17.27 * T) / (243.04 + T)) *
 # 计算850hPa位温
 # 假设海拔影响不大，表面压强相当于850hPa
 T_kelvin = regional_data["t2m"]  # T已经是开尔文
-sp = regional_data["sp"]   # sp,地表气压，Pa
+sp = regional_data["sp"]  # sp,地表气压，Pa
 theta = T_kelvin * (P0 / sp) ** (Rd / Cp)
 
 # 读取中国各省边界数据

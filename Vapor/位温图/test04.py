@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 # 读取ERA5文件数据
-era5_data = xr.open_dataset("Dataset/data2008_1.nc")
+era5_data = xr.open_dataset("../../Dataset/data2008_1.nc")
 
 # 选择时间点
 time_to_plot = "2008-01-12T08:00:00"
@@ -41,7 +41,7 @@ sp = regional_data["sp"]
 theta = T_kelvin * (P0 / sp) ** (Rd / Cp)
 
 # 读取中国各省边界数据
-china_provinces = gpd.read_file("Province_SHP/province.shp")
+china_provinces = gpd.read_file("../../Province_SHP/province.shp")
 
 # 绘图
 fig, ax = plt.subplots(figsize=(10, 10))
