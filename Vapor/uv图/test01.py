@@ -11,7 +11,7 @@ time_to_plot = "2008-01-12T08:00:00"
 data_at_time = era5_data.sel(time=time_to_plot)
 
 # 定义相关常数
-P0 = 100000  # 参考压强（Pa）
+P0 = 85000  # 参考压强（Pa）
 Rd = 287  # 干空气的特定气体常数J/(Kg·K)
 Cp = 1004  # 干空气等压比热容J/(Kg·K)
 
@@ -56,7 +56,7 @@ fig, ax = plt.subplots(figsize=(10, 10))
 # 绘制等值线
 lon, lat = np.meshgrid(regional_data.longitude, regional_data.latitude)
 # theta = regional_data["t2m"]  # 示例中为了简化，我们直接使用t2m表示
-contours = ax.contour(lon, lat, theta.squeeze(), levels=20, colors='#666666')
+contours = ax.contour(lon, lat, theta.squeeze(), levels=20, colors="#666666")
 ax.clabel(contours, inline=True, fontsize=8)
 
 # 使用contourf填充u10和v10同时大于0的部分

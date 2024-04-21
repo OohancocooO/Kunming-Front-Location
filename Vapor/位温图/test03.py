@@ -12,7 +12,7 @@ time_to_plot = "2008-01-12T08:00:00"
 data_at_time = era5_data.sel(time=time_to_plot)
 
 # 定义相关常数
-P0 = 100000  # 参考压强（Pa）
+P0 = 85000  # 参考压强（Pa）
 Rd = 287  # 干空气的特定气体常数J/(Kg·K)
 Cp = 1004  # 干空气等压比热容J/(Kg·K)
 
