@@ -2,16 +2,16 @@
 The teamwork of Atmospheric Physical Lesson
 大气物理学的小组作业
 
-## 作业内容 | Homeworks
+## 作业内容 | Homework info
 利用位温和假相当位温识别一次昆明准静止锋的演变过程，考察静止锋出现前后气象要素的变化
 
-### 理论数据资料 | Data Requirements
+### 理论数据资料 | Data requirements
 ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风场
 
 ### 要求 | Request
 两人为小组完成课题，最终以 Powerpoint 形式每组 5min 上台展现成果，由同学们互相打分获得成绩
 
-## 任务清单 | List
+## 任务清单 | Lists
 - [x] ERA5数据的下载
 - [x] 对位温进行计算以及绘图
 - [ ] 利用UV风场看其风向的变化
