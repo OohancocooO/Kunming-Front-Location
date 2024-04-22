@@ -4,7 +4,7 @@ import xarray as xr
 import matplotlib.pyplot as plt
 
 # 读取nc文件
-dataset1 = xr.open_dataset("Dataset\\data2008_1.nc")
+dataset = xr.open_dataset("../../Dataset/data2008_1.nc")
 
 # 接下来两行的路径也是正确的用法,相对路径也是可以的
 # (r"d:\data\测试\uv300.nc")
@@ -14,7 +14,8 @@ dataset1 = xr.open_dataset("Dataset\\data2008_1.nc")
 # tp Total precipitation 总降水量
 
 # 找到变量名称
-var_name = "U"
+# var_name = "U"
+tp = dataset.tp[dict(time=0, latitude=22, longitude=12)]
 
 # print(dataset)
-print(dataset1)
+print(tp.values)
