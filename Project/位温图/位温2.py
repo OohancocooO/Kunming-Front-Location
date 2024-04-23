@@ -17,8 +17,8 @@ Rd = 287  # 干空气的特定气体常数J/(Kg·K)
 Cp = 1004  # 干空气等压比热容J/(Kg·K)
 
 # 定义区域范围
-lon_range = [95, 115]
-lat_range = [20, 35]
+lon_range = [100, 110]
+lat_range = [22, 30]
 
 # 截取指定区域的数据
 regional_data = data_at_time.where(
