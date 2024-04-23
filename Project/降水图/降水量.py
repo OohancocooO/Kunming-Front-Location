@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 era5_data = xr.open_dataset("../../Dataset/data2008_1.nc")
 
 # 选择日期
-date_to_plot = "2008-01-01T"
+date_to_plot = "2008-01-12"
 
 # 选择该日期内的所有时间点
 data_at_date = era5_data.sel(time=date_to_plot)
@@ -29,7 +29,7 @@ regional_data = data_at_date.where(
 precipitation = regional_data["tp"] * 1000  # 将单位从米转换为毫米
 
 # 将时间维度合并为一维数组，并对降水量进行累积
-accumulated_precipitation = precipitation.resample(time="24H").sum()
+accumulated_precipitation = precipitation.resample(time="24h").sum()
 
 # 读取中国各省边界数据
 china_provinces = gpd.read_file("../../Province_SHP/province.shp")
@@ -44,4 +44,3 @@ ax.set_title(f"24-Hour Accumulated Precipitation (mm)\n{date_to_plot}")
 
 # 显示图形
 plt.show()
-
