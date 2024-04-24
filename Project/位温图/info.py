@@ -15,7 +15,7 @@ dataset = xr.open_dataset("../../Dataset/data2008_1.nc")
 
 # 找到变量名称
 # var_name = "U"
-tp = dataset.tp[dict(time=0, latitude=22, longitude=12)]
+t = dataset.d2m
 
 # print(dataset)
-print(tp.values)
+print(t)
