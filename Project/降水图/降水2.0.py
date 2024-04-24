@@ -19,10 +19,10 @@ lat_range = [22, 30]
 
 # 截取指定区域的数据
 regional_data = data_at_date.where(
-    (data_at_date.latitude >= lat_range[0]) & 
-    (data_at_date.latitude <= lat_range[1]) &
-    (data_at_date.longitude >= lon_range[0]) & 
-    (data_at_date.longitude <= lon_range[1]),
+    (data_at_date.latitude >= lat_range[0])
+    & (data_at_date.latitude <= lat_range[1])
+    & (data_at_date.longitude >= lon_range[0])
+    & (data_at_date.longitude <= lon_range[1]),
     drop=True,
 )
 
@@ -32,12 +32,14 @@ precipitation = regional_data["tp"] * 1000  # 将单位从米转换为毫米
 # 将时间维度合并为一维数组，并对降水量进行累积
 accumulated_precipitation = precipitation.resample(time="24h").sum()
 
-# 将降水量为0的值设置为NaN
-accumulated_precipitation = accumulated_precipitation.where(accumulated_precipitation != 0)
+# 将降水量为0的值设置为NaN ##这里好像有点问题（胡留）
+accumulated_precipitation = accumulated_precipitation.where(
+    accumulated_precipitation != 0
+)
 
 # 定义颜色
-colors = ["#bae4b3", "#31a354", "#a6bddb", "#0570b0", "#f768a1", "#7a0177", "#fec44f"] 
-levels = [0, 10, 25, 50, 100, 250, 400, 600]
+colors = ["#A5F38D", "#39AA00", "#63BAFF", "#0000FE", "#FF00FF", "#810040"]
+levels = [0, 10, 25, 50, 100, 250, 400]
 cmap = ListedColormap(colors)
 norm = BoundaryNorm(levels, ncolors=cmap.N, clip=True)
 
@@ -56,7 +58,14 @@ lat = accumulated_precipitation.latitude.values
 extent = [lon.min(), lon.max(), lat.min(), lat.max()]
 
 # 绘制平滑图像
-img = ax.imshow(accumulated_precip_array, extent=extent, origin='upper', cmap=cmap, norm=norm, interpolation='bilinear')
+img = ax.imshow(
+    accumulated_precip_array,
+    extent=extent,
+    origin="upper",
+    cmap=cmap,
+    norm=norm,
+    interpolation="bilinear",
+)
 
 # 绘制省界
 china_provinces.plot(ax=ax, color="none", edgecolor="gray")
@@ -66,8 +75,8 @@ ax.set_xlim([lon_range[0], lon_range[1]])
 ax.set_ylim([lat_range[0], lat_range[1]])
 
 # 添加色标
-cb = plt.colorbar(img, ax=ax, boundaries=levels, extend='max')
-cb.set_label('Accumulated Precipitation (mm)')
+cb = plt.colorbar(img, ax=ax, boundaries=levels, extend="max")
+cb.set_label("Accumulated Precipitation (mm)")
 
 # 设置标题
 ax.set_title(f"24-Hour Accumulated Precipitation (mm)\n{date_to_plot}")
