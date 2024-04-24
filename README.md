@@ -42,7 +42,7 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 ### *Needruirui*
 >1. 位温+等值线图![位温+等值线图](Project/img/Figure_7.png)
 >2. 降水图![降水图](Project/img/Figure_8.png)
-
+>3. 降水图加上了不同类型的颜色![降水图加上了不同类型的颜色](Project/img/Figure_9.png)
 
 
 ## 数据来源 | Data sources
