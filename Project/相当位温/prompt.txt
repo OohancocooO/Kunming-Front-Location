@@ -1,0 +1,40 @@
+现在需要python来计算相当位温，并且需要进行绘图，分层设色进行填充。
+
+相当位温计算方法如下：
+\theta_{e}=T\left(\frac{1000}{P-e}\right)^{\frac{R_{d}}{C_{pd}}}\left(\frac{T}{T_{LCL}}\right)^{0.28x}\exp\left(\left(\frac{3036.0}{T_{LCL}}-1.78\right)x(1+0.448x)\right)
+其中，T：温度(K) 
+T_{d}：露点温度(K) 
+P：気圧(hPa) 
+e：水蒸気圧(hPa) 
+x：混合比(kg/kg)
+R_{d} = 287.05
+C_{pd}=1004
+
+TCL计算公式：
+T_{LCL}=\frac{1}{\frac{1}{T_{d}-56}+\frac{\ln(T/T_{d})}{800}}+56
+饱和水汽压：
+e_{s}=6.112\exp\left(\frac{17.67(T-273.15)}{T-29.65}\right)
+水汽压：
+e=\frac{e_{s}exp[\frac{a(T_{d}-273.15)}{T_{d}-b}]}{exp[\frac{a(T-273.15)}{T-b}]}
+混合比：
+x=0.622\frac{e}{P-e}
+
+我还有一个shp文件需要投影到绘图上，文件名：province.shp
+但是范围需要限定在北纬22-30，东经100-110之间。
+
+关于data2008_1.nc文件信息如下：
+Dimensions:    (longitude: 101, latitude: 101, time: 744)
+Coordinates:
+  * longitude  (longitude) float32 404B 100.0 100.1 100.2 ... 109.8 109.9 110.0
+  * latitude   (latitude) float32 404B 30.0 29.9 29.8 29.7 ... 20.2 20.1 20.0
+  * time       (time) datetime64[ns] 6kB 2008-01-01 ... 2008-01-31T23:00:00
+Data variables:
+    d2m        (time, latitude, longitude) float32 30MB ...
+    t2m        (time, latitude, longitude) float32 30MB ...
+    sp         (time, latitude, longitude) float32 30MB ...
+    tp         (time, latitude, longitude) float32 30MB ...
+其中
+sp surface presure 地表气压
+ tp Total precipitation 总降水量
+d2m 露点气温
+t2m 地表气温

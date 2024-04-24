@@ -19,7 +19,7 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 - [x] 绘制**昆明-贵阳**的**气温/气压-时间**图
 - [ ] 降水绘制
 - [x] 风向图
-- [ ] 对假相当位温进行计算以及绘图
+- [x] 对假相当位温进行计算以及绘图
 - [ ] 考察静止锋出现前后气象要素的变化
 - [ ] 制作gif文件
 - [ ] 做 Powerpoint
@@ -33,6 +33,7 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 ![850hPa的等值线图](Project/img/Figure_1.png)
 >3. 850hPa的等值线图-(![#FFFFCC](https://placehold.co/15x15/FFFFCC/FFFFCC.png) `#FFFFCC` 是西南风，![#FFCCCC](https://placehold.co/15x15/FFCCCC/FFCCCC.png) `#FFCCCC` 是东北风)
 ![850hPa的等值线图](Project/img/Figure_3.png)
+>4. 相当位温图，还需要修正一下关于lable以及相关算法![相当位温图](Project/img/Figure_10.png)
 
 ### *Milkdog*
 >1. 风向图![风向图](Project/img/Figure_4.png)
@@ -45,7 +46,7 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 >3. 降水图加上了不同类型的颜色![降水图加上了不同类型的颜色](Project/img/Figure_9.png)
 
 
-## 数据来源 | Data sources
+## 参考资料 | References
 > 1.  [中国行政区划矢量图](https://github.com/GaryBikini/ChinaAdminDivisonSHP) 
 > GaryBikini/ChinaAdminDivisonSHP: v24.02.06, 2024, DOI: [10.5281/zenodo.10624971](https://zenodo.org/badge/latestdoi/269489269)
 > 2.  [ERA5-Land hourly data from 1950 to present](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land) 

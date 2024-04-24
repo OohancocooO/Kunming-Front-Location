@@ -18,4 +18,4 @@ dataset = xr.open_dataset("../../Dataset/data2008_1.nc")
 t = dataset.d2m
 
 # print(dataset)
-print(t)
+print(dataset)
