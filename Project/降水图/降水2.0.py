@@ -38,8 +38,8 @@ accumulated_precipitation = accumulated_precipitation.where(
 )
 
 # 定义颜色
-colors = ["#A5F38D", "#39AA00", "#63BAFF", "#0000FE", "#FF00FF", "#810040"]
-levels = [0, 10, 25, 50, 100, 250, 400]
+colors = ["#FFFFFF","#A5F38D", "#39AA00", "#63BAFF", "#0000FE", "#FF00FF", "#810040"]
+levels = [0, 2, 10, 25, 50, 100, 250, 400]
 cmap = ListedColormap(colors)
 norm = BoundaryNorm(levels, ncolors=cmap.N, clip=True)
 
