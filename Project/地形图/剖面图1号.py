@@ -1,3 +1,7 @@
+# 由于文件过大没上传，所以运行不出来
+# 由于文件过大没上传，所以运行不出来
+# 由于文件过大没上传，所以运行不出来
+
 import numpy as np
 import rasterio
 from rasterio.plot import show
@@ -24,7 +28,7 @@ line_xs, line_ys = interpolate_line(kunming_coords, guiyang_coords)
 elevations = []
 for a in range(22, 30):  # 纬度范围
     for b in range(100, 110):  # 经度范围
-        filename = f"D:\Study\Yunnan Uni\Atmos Physical\data\地形图\ALPSMLC30_N0{a}E{b}_DSM.tif"
+        filename = f"ALPSMLC30_N0{a}E{b}_DSM.tif"
         try:
             with rasterio.open(filename) as src:
                 for x, y in zip(line_xs, line_ys):
