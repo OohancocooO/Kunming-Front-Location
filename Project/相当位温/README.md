@@ -1,14 +1,15 @@
 ## 计算方法
 相当位温：
-$\theta_{e}=\theta\exp\left(\frac{Lr}{C_{p}T_{d}}\right)=T\left(\frac{p}{p_{0}}\right)^{-\frac{R}{C_{p}}}\exp\left(\frac{Lr}{C_{p}T_{d}}\right)$
+# $\theta_{e}=\theta\exp\left(\frac{Lr}{C_{p}T_{d}}\right)=T\left(\frac{p}{p_{0}}\right)^{-\frac{R}{C_{p}}}\exp\left(\frac{Lr}{C_{p}T_{d}}\right)$
 
-简化：$\theta_{e}=T\left(\frac{p}{p_{0}}\right)^{-\frac{R}{C_{p}}}\exp\left(\frac{Lr}{C_{p}T_{d}}\right)$
+简化：
+# $\theta_{e}=T\left(\frac{p}{p_{0}}\right)^{-\frac{R}{C_{p}}}\exp\left(\frac{Lr}{C_{p}T_{d}}\right)$
 
-R= $R_{d}$ = 287.05
+### R= $R_{d}$ = 287.05
 
-$C_{p}$=$C_{pd}$=1004
+### $C_{p}$ = $C_{pd}$ =1004
 
-$T_{d}$=露点温度
+### $T_{d}$=露点温度
 
 Lr
 T：温度(K) 
@@ -17,23 +18,23 @@ P：気圧(hPa)
 e：水蒸気圧(hPa) 
 x：混合比(kg/kg)
 
-$\theta_{e}=T\left(\frac{1000}{P-e}\right)^{\frac{R_{d}}{C_{pd}}}\left(\frac{T}{T_{LCL}}\right)^{0.28x}\exp\left(\left(\frac{3036.0}{T_{LCL}}-1.78\right)x(1+0.448x)\right)$
+# $\theta_{e}=T\left(\frac{1000}{P-e}\right)^{\frac{R_{d}}{C_{pd}}}\left(\frac{T}{T_{LCL}}\right)^{0.28x}\exp\left(\left(\frac{3036.0}{T_{LCL}}-1.78\right)x(1+0.448x)\right)$
 
 TCL计算
 
-<font size=10> $T_{LCL}=\frac{1}{\frac{1}{T_{D}-56}+\frac{\ln(T/T_{D})}{800}}+56$ </font>
+# $T_{LCL}=\frac{1}{\frac{1}{T_{D}-56}+\frac{\ln(T/T_{D})}{800}}+56$ 
 
 饱和水汽压
 
-\Large $e_{s}=6.112\exp\left(\frac{17.67(T-273.15)}{T-29.65}\right)$
+# $e_{s}=6.112\exp\left(\frac{17.67(T-273.15)}{T-29.65}\right)$
 
 水汽压
 
-<p style="font-size:16px;"> $e=\frac{e_{s}exp[\frac{a(T_{d}-273.15)}{T_{d}-b}]}{exp[\frac{a(T-273.15)}{T-b}]}$ </p>
+# $e=\frac{e_{s}exp[\frac{a(T_{d}-273.15)}{T_{d}-b}]}{exp[\frac{a(T-273.15)}{T-b}]}$ 
 
 混合比
 
-$x=0.622\frac{e}{P-e}$
+# $x=0.622\frac{e}{P-e}$
 
 
 
