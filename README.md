@@ -58,3 +58,4 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 > 2.  [ERA5-Land hourly data from 1950 to present](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land) 
 > This page illustrates the procedure to cite the ERA5-Land hourly data from 1950 to present dataset and provide appropriate attribution. This dataset is generated under the framework of the Copernicus Climate Change Service (C3S). For such dataset, the Licence to use Copernicus products only applies.
 > 3. [図形式配信資料における相当温位の算出方式の変更について](https://www.data.jma.go.jp/suishin/jyouhou/pdf/371.pdf)
+> 4. [ALOS Global Digital Surface Model "ALOS World 3D - 30m (AW3D30)"](https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm)
