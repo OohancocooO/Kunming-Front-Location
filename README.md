@@ -54,9 +54,12 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 >5. 降水图3h以内版本![降水图3h以内版本图](Project/img/Figure_15.png)
 
 ## 参考资料 | References
-> [1] [中国行政区划矢量图](https://github.com/GaryBikini/ChinaAdminDivisonSHP) 
-> GaryBikini/ChinaAdminDivisonSHP: v24.02.06, 2024, DOI: [10.5281/zenodo.10624971](https://zenodo.org/badge/latestdoi/269489269)
+> [1] [中国行政区划矢量图](https://github.com/GaryBikini/ChinaAdminDivisonSHP) GaryBikini/ChinaAdminDivisonSHP: v24.02.06, 2024, DOI: [10.5281/zenodo.10624971](https://zenodo.org/badge/latestdoi/269489269)
+> 
 > [2] [ERA5-Land hourly data from 1950 to present](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land) This page illustrates the procedure to cite the ERA5-Land hourly data from 1950 to present dataset and provide appropriate attribution. This dataset is generated under the framework of the Copernicus Climate Change Service (C3S). For such dataset, the Licence to use Copernicus products only applies.
+> 
 > [3] [図形式配信資料における相当温位の算出方式の変更について](https://www.data.jma.go.jp/suishin/jyouhou/pdf/371.pdf)
+> 
 > [4] [ALOS Global Digital Surface Model "ALOS World 3D - 30m (AW3D30)"](https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm)
+> 
 > [5] [罗浩, & 张亚男. (2023). 利用多源数据对 2019 年 2 月贵阳机场准静止锋低云天气诊断分析. 高原山地气象研究, 43(2), 44-51.](http://www.gysdqxyj.cn/cn/article/doi/10.3969/j.issn.1674-2184.2023.02.006?viewType=HTML)
