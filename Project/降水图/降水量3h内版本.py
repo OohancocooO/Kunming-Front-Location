@@ -9,7 +9,7 @@ era5_data = xr.open_dataset("../../Dataset/data2008_1.nc")
 
 # 选择日期
 date_to_plot = "2008-01-12"
-time_to_plot = "08:00:00"  # 选择特定时间点
+time_to_plot = "05:00:00"  # 选择特定时间点
 
 # 选择该时间点的前一个小时和下一个小时
 time_prev_hour = np.datetime64(date_to_plot + "T" + time_to_plot) - np.timedelta64(1, 'h')
