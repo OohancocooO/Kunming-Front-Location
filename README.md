@@ -1,7 +1,7 @@
 # Kunming-Front-Location
-![](https://unv-shield.librian.net/api/unv_shield?txt=大气物理学的小组作业&scale=2) 
-![](https://unv-shield.librian.net/api/unv_shield?txt=The+teamwork+of+Atmospheric+Physical+Lesson&scale=2) 
-![](https://unv-shield.librian.net/api/unv_shield?repo=oohancocooo/Kunming-Front-Location)
+![](https://unv-shield.librian.net/api/unv_shield?txt=大气物理学的小组作业&scale=2&url=http://www.srees.ynu.edu.cn/dqkxx/dfiles/images/dqkxxlogo.png) 
+![](https://unv-shield.librian.net/api/unv_shield?txt=The+teamwork+of+Atmospheric+Physical+Lesson&scale=2&url=http://www.srees.ynu.edu.cn/dqkxx/dfiles/images/dqkxxlogo.png) 
+![](https://unv-shield.librian.net/api/unv_shield?repo=oohancocooo/Kunming-Front-Location&url=http://www.srees.ynu.edu.cn/dqkxx/dfiles/images/dqkxxlogo.png)
 
 
 ## 作业内容 | Homework info
