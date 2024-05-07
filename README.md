@@ -3,6 +3,9 @@
 ![](https://unv-shield.librian.net/api/unv_shield?txt=The+teamwork+of+Atmospheric+Physical+Lesson&scale=2&url=http://www.srees.ynu.edu.cn/dqkxx/dfiles/images/dqkxxlogo.png) 
 ![](https://unv-shield.librian.net/api/unv_shield?repo=oohancocooo/Kunming-Front-Location&url=http://www.srees.ynu.edu.cn/dqkxx/dfiles/images/dqkxxlogo.png)
 
+> [!CAUTION]
+> 本企划已经结束，理论上不会再更改。如有问题欢迎发Email，Email的链接在个人主页处
+
 
 ## 作业内容 | Homework info
 利用位温和假相当位温识别一次昆明准静止锋的演变过程，考察静止锋出现前后气象要素的变化
