@@ -30,7 +30,7 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 - [x] 考察静止锋出现前后气象要素的变化
 - [x] 制作gif文件
 - [x] 做 Powerpoint
-- [ ] 汇报 **[时间：2024/05/08]**
+- [x] 汇报 **[时间：2024/05/08]**
 
 ## 目前成果 | Current results
 ### *Vapor*
@@ -71,3 +71,9 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 > [4] [ALOS Global Digital Surface Model "ALOS World 3D - 30m (AW3D30)"](https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm)
 > 
 > [5] [罗浩, & 张亚男. (2023). 利用多源数据对 2019 年 2 月贵阳机场准静止锋低云天气诊断分析. 高原山地气象研究, 43(2), 44-51.](http://www.gysdqxyj.cn/cn/article/doi/10.3969/j.issn.1674-2184.2023.02.006?viewType=HTML)
+
+## 感谢以下同学的帮忙!!!!!
+
+<a href="https://github.com/OohancocooO/Kunming-Front-Location/graphs/contributors" target="_blank">
+  <img src="https://contrib.rocks/image?repo=OohancocooO/Kunming-Front-Location" />
+</a>
