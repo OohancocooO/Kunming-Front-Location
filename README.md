@@ -42,7 +42,8 @@ ERA5地表12-2月逐小时气温、露点温度、降水、云、气压和UV风�
 >6. 区域内剖面图，以昆明到贵阳为例
 样式1：![区域内剖面图1](Project/img/Figure_12.png)
 样式2：![区域内剖面图2](Project/img/Figure_13.png)
->7. 288K作为其锋线图![288K作为其锋线图](Project/img/Figure_16.png)
+>7. 288K位温作为其锋线图![288K作为其锋线图](Project/img/Figure_16.png)
+>8. 300K相当位温作为其锋线图![300K相当位温作为其锋线图](Project/img/Figure_17.png)
 
 
 ### *Milkdog*
